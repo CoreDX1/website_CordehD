@@ -1,0 +1,180 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    background-color: rgb(204, 200, 200);
+    min-height: 100vh;
+    position: relative;
+    margin: 0;
+    padding-bottom: 100px; // height of the footer
+    box-sizing: border-box;
+}
+  
+footer {
+    position: absolute;
+    bottom: 0;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/*Contenido*/
+
+.main{
+    padding: 10px;
+}
+
+.main .opcion-01,
+.main .opcion-02{
+    display: flex;
+    flex-direction: row;
+    border-top: 1px solid black;
+    border-bottom: 5px solid black;
+    background-color: rgb(218, 218, 218);
+    margin-top: 10px;
+    border-radius: 14px;
+}
+
+.main .imagen{
+    max-width: 25%;
+    height: 100%;   
+    margin: 20px 20px;
+    border-radius: 5px; 
+}
+
+.main .texto .precio{
+    color: rgb(214, 50, 200);
+    font-size: 20px;
+}
+
+/*Nosotros*/
+
+.main-02{
+    padding: 30px;
+    display: flex;
+    gap: 30px;
+}
+
+.main-02 .texto-02{
+    width: 50%;
+}
+
+.texto-02 h2{
+    font-weight: bold;
+}
+
+.texto-02 .texto_01{
+    margin-top: 25px;
+    color: #000000;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.texto-02 .texto_02{
+    font-weight: bold;
+}
+
+.main-02 .cartel{
+    position:absolute;
+    text-align: start;
+    background-color: #1e1e1e;
+    color: white;
+    width: 40%;
+    right: 0;
+    margin-right: 20px;
+    padding: 20px;
+    height: 150px;
+    border-radius: 4px;
+}
+
+.main-02 .cartel h2{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+
+.main-02 .cartel .empresa{
+    font-size: 30px;
+    color: #1f900c;
+}
+
+
+.noticias{
+    gap: 30px;
+    margin: 20px auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat( 2, auto);
+    grid-template-areas: "imagen-1 imagen-1 imagen-2 imagen-3"
+                         "imagen-1 imagen-1 imagen-4 imagen-5";
+}           
+
+
+.imagen-1-,
+.imagen-2-,
+.imagen-3-,
+.imagen-4-,
+.imagen-5-{
+    width: 100%;
+    height: 100%;
+    min-width: 20%;
+    border-radius: 10px;
+}
+
+.noticias p{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin: 3px auto;
+    color: black;
+}
+
+.noticias-galeria-1{
+    grid-area: imagen-1;
+}
+
+.noticias-galeria-2{
+    grid-area: imagen-2;
+}
+
+.noticias-galeria-3{
+    grid-area: imagen-3;
+}
+
+
+.noticias-galeria-4{
+    grid-area: imagen-4;
+}
+
+.noticias-galeria-5{
+    grid-area: imagen-5;
+}
+
+
+
+@media only screen and (min-width:0px) and (max-width:767px) {
+    .noticias{
+        grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat( 4, auto);
+    grid-template-areas: "imagen-1 imagen-1"
+                         "imagen-1 imagen-1"
+                         "imagen-2 imagen-3"
+                         "imagen-4 imagen-5";
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width: 992px) {
+    .noticias{
+        grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat( 3, auto);
+    grid-template-areas: "imagen-2 imagen-3"
+                         "imagen-1 imagen-1"
+                         "imagen-4 imagen-5"
+                        
+    }
+}
